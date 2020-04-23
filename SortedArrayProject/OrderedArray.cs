@@ -6,7 +6,7 @@ namespace SortedArrayProject
 {
     public class OrderedArray<T> where T : IComparable<T>
     {
-        private T[] _array;
+        private readonly T[] _array;
 
         public int Count { get; private set; }
 
@@ -18,12 +18,29 @@ namespace SortedArrayProject
 
         public int Find(T item)
         {
-            return BinarySearch(item);
+            bool found = BinarySearch(item, out var itemIndex);
+            if (found)
+            {
+                return itemIndex;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         public void Add(T item)
         {
-            throw new NotImplementedException();
+            if (Count <= _array.Length)
+            {
+                Count++;
+                BinarySearch(item, out var itemIndex);
+                for (int i = Count - 1; i > itemIndex; i--)
+                {
+                    _array[i] = _array[i - 1];
+                }
+                _array[itemIndex] = item;
+            }
         }
 
         public bool Remove(T item)
@@ -31,21 +48,30 @@ namespace SortedArrayProject
             throw new NotImplementedException();
         }
 
-        private int BinarySearch(T item)
+        public void Show()
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                Console.Write(_array[i] + " ");
+            }
+
+            Console.WriteLine();
+        }
+
+        private bool BinarySearch(T item, out int index)
         {
             int lowerBound = 0;
             int upperBound = Count - 1;
-            int currentItemIndex;
-
 
             while (true)
             {
-                currentItemIndex = (lowerBound + upperBound) / 2;
+                var currentItemIndex = (lowerBound + upperBound) / 2;
                 int comparison = _array[currentItemIndex].CompareTo(item);
 
                 if (comparison == 0)
                 {
-                    return currentItemIndex;
+                    index = currentItemIndex;
+                    return true;
                 }
                 else if (comparison < 0)
                 {
@@ -58,7 +84,8 @@ namespace SortedArrayProject
 
                 if (lowerBound > upperBound)
                 {
-                    return -1;
+                    index = currentItemIndex;
+                    return false;
                 }
             }
         }
