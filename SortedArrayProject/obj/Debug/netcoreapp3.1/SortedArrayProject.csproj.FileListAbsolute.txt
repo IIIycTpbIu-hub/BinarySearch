@@ -1,0 +1,11 @@
+D:\Progects\SortedArrayProject\SortedArrayProject\bin\Debug\netcoreapp3.1\SortedArrayProject.exe
+D:\Progects\SortedArrayProject\SortedArrayProject\bin\Debug\netcoreapp3.1\SortedArrayProject.deps.json
+D:\Progects\SortedArrayProject\SortedArrayProject\bin\Debug\netcoreapp3.1\SortedArrayProject.runtimeconfig.json
+D:\Progects\SortedArrayProject\SortedArrayProject\bin\Debug\netcoreapp3.1\SortedArrayProject.runtimeconfig.dev.json
+D:\Progects\SortedArrayProject\SortedArrayProject\bin\Debug\netcoreapp3.1\SortedArrayProject.dll
+D:\Progects\SortedArrayProject\SortedArrayProject\bin\Debug\netcoreapp3.1\SortedArrayProject.pdb
+D:\Progects\SortedArrayProject\SortedArrayProject\obj\Debug\netcoreapp3.1\SortedArrayProject.csprojAssemblyReference.cache
+D:\Progects\SortedArrayProject\SortedArrayProject\obj\Debug\netcoreapp3.1\SortedArrayProject.AssemblyInfoInputs.cache
+D:\Progects\SortedArrayProject\SortedArrayProject\obj\Debug\netcoreapp3.1\SortedArrayProject.AssemblyInfo.cs
+D:\Progects\SortedArrayProject\SortedArrayProject\obj\Debug\netcoreapp3.1\SortedArrayProject.dll
+D:\Progects\SortedArrayProject\SortedArrayProject\obj\Debug\netcoreapp3.1\SortedArrayProject.pdb
