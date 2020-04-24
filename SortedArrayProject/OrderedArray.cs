@@ -16,6 +16,8 @@ namespace SortedArrayProject
             Count = 0;
         }
 
+        public T this[int index] => _array[index];
+
         public int Find(T item)
         {
             bool found = BinarySearch(item, out var itemIndex);
@@ -45,7 +47,20 @@ namespace SortedArrayProject
 
         public bool Remove(T item)
         {
-            throw new NotImplementedException();
+            bool found = BinarySearch(item, out var itemIndex);
+            if (found)
+            {
+                for (int i = itemIndex; i < Count - 1; i++)
+                {
+                    _array[i] = _array[i + 1];
+                }
+
+                _array[Count - 1] = default(T);
+                Count--;
+                return true;
+            }
+
+            return false;
         }
 
         public void Show()
